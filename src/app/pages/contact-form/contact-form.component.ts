@@ -27,4 +27,20 @@ export class ContactFormComponent {
       });
     }
   }
+
+  get firstName(){
+    return this.contactForm.get("firstName");
+  }
+
+  get lastName(){
+    return this.contactForm.get("lastName");
+  }
+
+  get email(){
+    return this.contactForm.get("email");
+  }
+
+  get phoneNumber(){
+    return this.contactForm.get("phoneNumber");
+  }
 }

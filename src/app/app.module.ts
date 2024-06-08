@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModuleModule } from './material-module/material-module.module';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
