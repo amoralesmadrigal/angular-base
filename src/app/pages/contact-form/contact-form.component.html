@@ -7,6 +7,7 @@
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <mat-card-content >
         <mat-form-field >
+          <mat-label>Nombre</mat-label>
           <input matInput placeholder="Nombre" formControlName="firstName" required>
           <mat-error *ngIf="firstName?.errors?.['required']">Campo obligatorio</mat-error>
         </mat-form-field>
@@ -14,6 +15,7 @@
       
       <mat-card-content >
         <mat-form-field >
+          <mat-label>Apellido</mat-label>
           <input matInput placeholder="Apellido" formControlName="lastName" required>
           <mat-error *ngIf="lastName?.errors?.['required']">Campo obligatorio</mat-error>
         </mat-form-field>
@@ -21,20 +23,50 @@
       
       <mat-card-content >
         <mat-form-field >
+          <mat-label>Correo Electrónico</mat-label>
           <input matInput placeholder="Correo Electrónico" formControlName="email" required>
           <mat-error *ngIf="email?.errors?.['required']">Campo obligatorio</mat-error>
+          <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
       </mat-card-content>
       
       <mat-card-content >
         <mat-form-field >
+          <mat-label>Teléfono</mat-label>
           <input matInput placeholder="Teléfono" formControlName="phoneNumber" required>
           <mat-error *ngIf="phoneNumber?.errors?.['required']">Campo obligatorio</mat-error>
+          <mat-icon matSuffix>phone</mat-icon>
         </mat-form-field>
       </mat-card-content>
-      <mat-card-actions align="start">
-        <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">Enviar</button>
-      </mat-card-actions>
+
+      <mat-card class="result">
+        <mat-card-content>
+          <mat-card-header>
+            <mat-card-title>Consentimiento</mat-card-title>
+          </mat-card-header>
+          <p>
+            Al enviar este formulario, usted acepta que sus datos personales sean tratados conforme a nuestra Política de Privacidad. <br>Sus datos serán utilizados exclusivamente para gestionar su solicitud. 
+            Puede ejercer sus derechos de acceso, rectificación, supresión, limitación y oposición enviando un correo electrónico a loquesea@email.com *
+          </p>
+          <section>
+              <mat-slide-toggle
+                [color]="color"
+                [checked]="checked"
+                [disabled]="disabled"
+                formControlName="consentimiento"
+                required
+                >
+                Aceptar
+              </mat-slide-toggle>
+          </section>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">Enviar</button>
+        </mat-card-actions>
+      </mat-card>
+
+      
     </form>
   </mat-card>
 

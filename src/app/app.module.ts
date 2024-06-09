@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModuleModule } from './material-module/material-module.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     MaterialModuleModule
