@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
 const routes: Routes = [
   { path: 'header', component: HeaderComponent },
   //{ path: '', redirectTo: '/contact', pathMatch: 'full' }
-  { path: '', component: ContactFormComponent  }
+  //{ path: '', component: ContactFormComponent  }
 ];
 
 @NgModule({

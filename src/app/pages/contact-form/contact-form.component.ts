@@ -28,6 +28,7 @@ export class ContactFormComponent {
     if (this.contactForm.valid) {
       this.contactService.createContact(this.contactForm.value).subscribe(() => {
         alert('Contact information sent successfully');
+        this.contactForm.untouched
         this.contactForm.reset();
       });
     }

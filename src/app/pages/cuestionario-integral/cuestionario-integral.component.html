@@ -1,0 +1,81 @@
+
+
+<div class="container my-3">
+    <!---->
+    <form [formGroup]="cuestionarioForm" >
+
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>Metros Cuadrados de la Vivienda {{sliderMC.value}}</mat-card-title>
+            </mat-card-header>
+      
+            <mat-card-content>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-slider min="1" max="300" step="1"  >
+                    <input matSliderThumb [(ngModel)]="valorMetrosCuadrados" #sliderMC>
+                </mat-slider>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <label></label>
+              </div>
+
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Número de habitaciones {{sliderHab.value}}</mat-card-title>
+            </mat-card-header>
+      
+            <mat-card-content>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-slider min="1" max="10" step="1" (input)="onSliderChangeHabitaciones($event)">
+                    <input matSliderThumb [(ngModel)]="valorHabitaciones" #sliderHab>
+                </mat-slider>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Número de baños {{sliderWc.value}}</mat-card-title>
+            </mat-card-header>
+      
+            <mat-card-content>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-slider min="1" max="5" step="1" (input)="onSliderChangeWc($event)">
+                    <input matSliderThumb [(ngModel)]="valorWc" #sliderWc>
+                </mat-slider>
+              </div>
+            </mat-card-content>
+          </mat-card>
+ 
+<!--
+    <mat-accordion>
+        <mat-expansion-panel expanded = true>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                  
+                </mat-panel-title>
+                <mat-panel-description>
+                    Distribución de la vivienda
+                  <mat-icon>account_circle</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              
+        </mat-expansion-panel>
+    </mat-accordion>
+    -->
+    
+
+   
+    </form>
+    
+</div>
+
+        
+            
+
+        
+
+
