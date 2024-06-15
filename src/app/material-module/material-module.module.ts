@@ -24,8 +24,6 @@ import {MatSliderModule} from '@angular/material/slider';
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
-    MatButtonToggleModule,
-    MatExpansionModule,
     MatSliderModule
   ],
   exports: [
@@ -37,8 +35,6 @@ import {MatSliderModule} from '@angular/material/slider';
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
-    MatButtonToggleModule,
-    MatExpansionModule,
     MatSliderModule
   ]
 })
