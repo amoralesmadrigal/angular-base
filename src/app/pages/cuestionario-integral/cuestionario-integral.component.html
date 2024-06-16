@@ -60,13 +60,13 @@
 
           <mat-card class="no-shadow">
             <mat-card-header>
-              <mat-card-title>Estado de la vivienda</mat-card-title>
+              <mat-card-title>Calidad</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
                 <mat-form-field>
-                  <mat-select [formControl]="estadoViviendaControl" name="estadoVivienda">
-                    <mat-option *ngFor="let estadoReforma of estadoViviendaList" [value]="estadoReforma.id">
+                  <mat-select [formControl]="calidadControl" name="calidad">
+                    <mat-option *ngFor="let estadoReforma of calidadList" [value]="estadoReforma.id">
                       {{estadoReforma.descripcion}}
                     </mat-option>
                   </mat-select>
@@ -76,14 +76,14 @@
 
           <mat-card class="no-shadow">
             <mat-card-header>
-              <mat-card-title>Tipo de Reforma</mat-card-title>
+              <mat-card-title>Estado</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
                 <mat-form-field>
-                  <mat-select [formControl]="tipoReformaControl" name="tipoReforma">
-                    <mat-option *ngFor="let tipoReforma of tipoReformaList" [value]="tipoReforma.id">
-                      {{tipoReforma.descripcion}}
+                  <mat-select [formControl]="estadoReformaControl" name="estadoReforma">
+                    <mat-option *ngFor="let estadoReforma of estadoReformaList" [value]="estadoReforma.id">
+                      {{estadoReforma.descripcion}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>

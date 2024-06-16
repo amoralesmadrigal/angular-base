@@ -13,14 +13,14 @@ import { TabStateService } from 'src/app/services/tab-state.service';
 export class CuestionarioIntegralComponent implements OnInit{
   cuestionarioForm: FormGroup;
   viviendaControl: FormControl;
-  estadoViviendaControl: FormControl;
-  tipoReformaControl: FormControl;
+  calidadControl: FormControl;
+  estadoReformaControl: FormControl;
   valorMetrosCuadrados: number = 1;
   valorHabitaciones: number = 1;
   valorWc: number = 1;
   viviendaList: Vivienda[] =[];
-  tipoReformaList: TipoReforma[] =[];
-  estadoViviendaList: EstadoVivienda[] =[];
+  estadoReformaList: TipoReforma[] =[];
+  calidadList: EstadoVivienda[] =[];
 
   constructor(private fb: FormBuilder, private tabStateService: TabStateService) {
     this.cuestionarioForm = this.fb.group({
@@ -34,12 +34,12 @@ export class CuestionarioIntegralComponent implements OnInit{
       { id: 1,  descripcion: 'Casa' },
     ];
 
-    this.tipoReformaList = [
+    this.estadoReformaList = [
       { id: 0,  descripcion: 'Para reformar' },
       { id: 1,  descripcion: 'Buen estado' },
     ];
 
-    this.estadoViviendaList = [
+    this.calidadList = [
       { id: 0,  descripcion: 'Básica' },
       { id: 1,  descripcion: 'Media' },
       { id: 2,  descripcion: 'Alta' },
@@ -47,8 +47,8 @@ export class CuestionarioIntegralComponent implements OnInit{
 
 
     this.viviendaControl = new FormControl(this.viviendaList[0].id);
-    this.estadoViviendaControl = new FormControl(this.estadoViviendaList[0].id);
-    this.tipoReformaControl = new FormControl(this.tipoReformaList[0].id);
+    this.calidadControl = new FormControl(this.calidadList[0].id);
+    this.estadoReformaControl = new FormControl(this.estadoReformaList[0].id);
   }
 
   onSliderChangeMetrosCuadrados(event: any) {
