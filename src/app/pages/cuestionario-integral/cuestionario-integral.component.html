@@ -6,7 +6,7 @@
 
         <mat-card>
             <mat-card-header>
-              <mat-card-title>Metros Cuadrados de la Vivienda {{sliderMC.value}}</mat-card-title>
+              <mat-card-title> m<sup>2</sup> de la vivienda {{sliderMC.value}}</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
@@ -24,7 +24,7 @@
 
           <mat-card>
             <mat-card-header>
-              <mat-card-title>Número de habitaciones {{sliderHab.value}}</mat-card-title>
+              <mat-card-title>N&deg; de habitaciones {{sliderHab.value}}</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
@@ -38,7 +38,7 @@
 
           <mat-card>
             <mat-card-header>
-              <mat-card-title>Número de baños {{sliderWc.value}}</mat-card-title>
+              <mat-card-title>N&deg; de baños {{sliderWc.value}}</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
@@ -49,6 +49,69 @@
               </div>
             </mat-card-content>
           </mat-card>
+
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Tipo de vivienda</mat-card-title>
+            </mat-card-header>
+      
+            <mat-card-content>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-form-field>
+                  <mat-select [formControl]="viviendaControl" name="vivienda">
+                    <mat-option *ngFor="let vivienda of viviendaList" [value]="vivienda.id">
+                      {{vivienda.descripcion}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Estado de la vivienda</mat-card-title>
+            </mat-card-header>
+      
+            <mat-card-content>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-form-field>
+                  <mat-select [formControl]="estadoViviendaControl" name="estadoVivienda">
+                    <mat-option *ngFor="let estadoReforma of estadoViviendaList" [value]="estadoReforma.id">
+                      {{estadoReforma.descripcion}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Tipo de Reforma</mat-card-title>
+            </mat-card-header>
+      
+            <mat-card-content>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-form-field>
+                  <mat-select [formControl]="tipoReformaControl" name="tipoReforma">
+                    <mat-option *ngFor="let tipoReforma of tipoReformaList" [value]="tipoReforma.id">
+                      {{tipoReforma.descripcion}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card>
+            <mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button color="primary" type="button" (click)="habilitarPecasTab()">Calcular</button>
+              </mat-card-actions>
+            </mat-card-content>
+          </mat-card>
+
  
 <!--
     <mat-accordion>
