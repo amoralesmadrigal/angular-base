@@ -71,8 +71,8 @@ export class CuestionarioIntegralComponent implements OnInit{
     return `${value}`;
   }
 
-  habilitarPecasTab() {
-    this.tabStateService.enableTab('pecas');
+  habilitarResultadoIntegralTab() {
+    this.tabStateService.enableTab('resultadoIntegral');
     this.tabStateService.changeTab(1);
   }
 

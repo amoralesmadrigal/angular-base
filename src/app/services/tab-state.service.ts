@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
   providedIn: 'root'
 })
 export class TabStateService {
-  private tabDisabledState = new BehaviorSubject<{ [key: string]: boolean }>({ pecas: true });
+  private tabDisabledState = new BehaviorSubject<{ [key: string]: boolean }>({ resultadoIntegral: true, datosContacto: true });
   tabDisabledState$ = this.tabDisabledState.asObservable();
 
   private selectedIndex = new BehaviorSubject<number>(0);

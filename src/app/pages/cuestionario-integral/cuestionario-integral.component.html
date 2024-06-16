@@ -1,62 +1,53 @@
 
 
-<div class="container my-3">
-    <!---->
-    <form [formGroup]="cuestionarioForm" >
 
-        <mat-card>
+<div class="container my-3">
+    <form [formGroup]="cuestionarioForm" >
+      <div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center stretch">
+        <mat-card class="no-shadow">
             <mat-card-header>
               <mat-card-title> m<sup>2</sup> de la vivienda {{sliderMC.value}}</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
-              <div fxLayout="row" fxLayoutAlign="center center">
                 <mat-slider min="1" max="300" step="1"  >
                     <input matSliderThumb [(ngModel)]="valorMetrosCuadrados" #sliderMC>
                 </mat-slider>
-              </div>
-              <div fxLayout="row" fxLayoutAlign="center center">
-                <label></label>
-              </div>
-
+              
             </mat-card-content>
           </mat-card>
 
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>N&deg; de habitaciones {{sliderHab.value}}</mat-card-title>
-            </mat-card-header>
-      
-            <mat-card-content>
-              <div fxLayout="row" fxLayoutAlign="center center">
-                <mat-slider min="1" max="10" step="1" (input)="onSliderChangeHabitaciones($event)">
-                    <input matSliderThumb [(ngModel)]="valorHabitaciones" #sliderHab>
-                </mat-slider>
-              </div>
-            </mat-card-content>
-          </mat-card>
-
-          <mat-card>
+          <mat-card class="no-shadow">
             <mat-card-header>
               <mat-card-title>N&deg; de baños {{sliderWc.value}}</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
-              <div fxLayout="row" fxLayoutAlign="center center">
+              
                 <mat-slider min="1" max="5" step="1" (input)="onSliderChangeWc($event)">
                     <input matSliderThumb [(ngModel)]="valorWc" #sliderWc>
                 </mat-slider>
-              </div>
+              
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="no-shadow">
+            <mat-card-header>
+              <mat-card-title>N&deg; de habitaciones {{sliderHab.value}}</mat-card-title>
+            </mat-card-header>
+      
+            <mat-card-content>
+              <mat-slider min="1" max="10" step="1" (input)="onSliderChangeHabitaciones($event)">
+                  <input matSliderThumb [(ngModel)]="valorHabitaciones" #sliderHab>
+              </mat-slider>
             </mat-card-content>
           </mat-card>
 
-          <mat-card>
+          <mat-card class="no-shadow">
             <mat-card-header>
               <mat-card-title>Tipo de vivienda</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
-              <div fxLayout="row" fxLayoutAlign="center center">
                 <mat-form-field>
                   <mat-select [formControl]="viviendaControl" name="vivienda">
                     <mat-option *ngFor="let vivienda of viviendaList" [value]="vivienda.id">
@@ -64,17 +55,15 @@
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
-              </div>
             </mat-card-content>
           </mat-card>
 
-          <mat-card>
+          <mat-card class="no-shadow">
             <mat-card-header>
               <mat-card-title>Estado de la vivienda</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
-              <div fxLayout="row" fxLayoutAlign="center center">
                 <mat-form-field>
                   <mat-select [formControl]="estadoViviendaControl" name="estadoVivienda">
                     <mat-option *ngFor="let estadoReforma of estadoViviendaList" [value]="estadoReforma.id">
@@ -82,17 +71,15 @@
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
-              </div>
             </mat-card-content>
           </mat-card>
 
-          <mat-card>
+          <mat-card class="no-shadow">
             <mat-card-header>
               <mat-card-title>Tipo de Reforma</mat-card-title>
             </mat-card-header>
       
             <mat-card-content>
-              <div fxLayout="row" fxLayoutAlign="center center">
                 <mat-form-field>
                   <mat-select [formControl]="tipoReformaControl" name="tipoReforma">
                     <mat-option *ngFor="let tipoReforma of tipoReformaList" [value]="tipoReforma.id">
@@ -100,17 +87,19 @@
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
-              </div>
             </mat-card-content>
           </mat-card>
 
-          <mat-card>
+          <mat-card class="no-shadow">
             <mat-card-content>
               <mat-card-actions>
-                <button mat-raised-button color="primary" type="button" (click)="habilitarPecasTab()">Calcular</button>
+                <button mat-raised-button color="primary" type="button" (click)="habilitarResultadoIntegralTab()">Calcular</button>
               </mat-card-actions>
             </mat-card-content>
           </mat-card>
+
+        </div>
+        
 
  
 <!--
@@ -134,8 +123,8 @@
    
     </form>
     
-</div>
 
+</div>
         
             
 

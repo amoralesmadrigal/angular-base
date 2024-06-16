@@ -7,7 +7,8 @@ import { TabStateService } from '../services/tab-state.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent  implements OnInit{
-  isPecasDisabled = true;
+  isResultadoIntegralDisabled = true;
+  isDatosContactoDisabled = true;
   selectedIndex = 0;
 
   constructor(private tabStateService: TabStateService){
@@ -16,7 +17,8 @@ export class HeaderComponent  implements OnInit{
 
   ngOnInit() {
     this.tabStateService.tabDisabledState$.subscribe(state => {
-      this.isPecasDisabled = state['pecas'];
+      this.isResultadoIntegralDisabled = state['resultadoIntegral'];
+      this.isDatosContactoDisabled = state['datosContacto'];
     });
 
     this.tabStateService.selectedIndex$.subscribe(index => {

@@ -1,14 +1,14 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="center center">
     <span>El Reformatorio</span>
 </mat-toolbar>
 <mat-tab-group [(selectedIndex)]="selectedIndex">
-    <mat-tab label="Calcular Presupuesto">
+    <mat-tab label="Calcula tu presupuesto">
         <app-cuestionario-integral></app-cuestionario-integral>
     </mat-tab>
-    <mat-tab label="Costo de la Reforma" >
+    <mat-tab label="Resultado" [disabled]="isResultadoIntegralDisabled">
         <app-resultado-integral></app-resultado-integral>
     </mat-tab>
-    <mat-tab label="Datos de Contacto" >
+    <mat-tab label="Datos de Contacto" [disabled]="isDatosContactoDisabled">
         <app-contact-form></app-contact-form>
     </mat-tab>
 </mat-tab-group>

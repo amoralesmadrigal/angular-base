@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
@@ -26,6 +26,7 @@ import { ResultadoIntegralComponent } from './pages/resultado-integral/resultado
     BrowserModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     HttpClientModule,
     AppRoutingModule,
     MaterialModuleModule
