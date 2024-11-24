@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ContactService } from '../../services/contact.service';
 import { ThemePalette } from '@angular/material/core';
 import { TabStateService } from 'src/app/services/tab-state.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,6 +15,7 @@ export class ContactFormComponent {
   color: ThemePalette = 'accent';
   checked = false;
   disabled = false;
+  loading = false;
 
   constructor(private fb: FormBuilder, private contactService: ContactService, private tabStateService: TabStateService) {
     this.contactForm = this.fb.group({
@@ -27,11 +29,17 @@ export class ContactFormComponent {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
+      this.loading = true;
       this.contactService.createContact(this.contactForm.value, this.tabStateService.getTabParams("resultadoIntegral")).subscribe(() => {
-        alert('Contact information sent successfully');
+        this.loading = false;
+        Swal.fire({
+          title: "Información enviada",
+          text: "¡Revisa tu correo!",
+          icon: "success"
+        });
         this.contactForm.untouched
         this.contactForm.reset();
-      });
+      }, );
     }
   }
 
