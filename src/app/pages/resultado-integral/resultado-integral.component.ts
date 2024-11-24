@@ -8,12 +8,23 @@ import { TabStateService } from 'src/app/services/tab-state.service';
   styleUrls: ['./resultado-integral.component.css']
 })
 export class ResultadoIntegralComponent {
-
-  constructor(private fb: FormBuilder, private tabStateService: TabStateService) {}
-
+  
+  constructor(private fb: FormBuilder, private tabStateService: TabStateService) {
+    
+  }
+  
   habilitarDatosContactoTab() {
     this.tabStateService.enableTab('datosContacto');
     this.tabStateService.changeTab(2);
+  }
+
+  getTabParams(tabName: string, key: string): any {
+    const param = this.tabStateService.getTabParams(tabName);
+    if(param === undefined){
+      return null;
+    }else{
+      return param.get(key);
+    }
   }
 
 }

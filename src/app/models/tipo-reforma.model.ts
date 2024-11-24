@@ -1,4 +1,7 @@
+import { TipoReformaDes } from "../enums/tipoReformaDes.enum";
+import { TipoReformaId } from "../enums/tipoReformaId.enum";
+
 export interface TipoReforma {
-    id: number;
-    descripcion: string;
+    id: TipoReformaId;
+    descripcion: TipoReformaDes;
 }

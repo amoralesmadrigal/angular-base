@@ -3,4 +3,5 @@ export interface Contact {
     lastName: string;
     email: string;
     phoneNumber: string;
+    messages: Map<string, string>
   }

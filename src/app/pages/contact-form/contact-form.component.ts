@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ContactService } from '../../services/contact.service';
 import { ThemePalette } from '@angular/material/core';
+import { TabStateService } from 'src/app/services/tab-state.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,7 +15,7 @@ export class ContactFormComponent {
   checked = false;
   disabled = false;
 
-  constructor(private fb: FormBuilder, private contactService: ContactService) {
+  constructor(private fb: FormBuilder, private contactService: ContactService, private tabStateService: TabStateService) {
     this.contactForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -26,7 +27,7 @@ export class ContactFormComponent {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      this.contactService.createContact(this.contactForm.value).subscribe(() => {
+      this.contactService.createContact(this.contactForm.value, this.tabStateService.getTabParams("resultadoIntegral")).subscribe(() => {
         alert('Contact information sent successfully');
         this.contactForm.untouched
         this.contactForm.reset();

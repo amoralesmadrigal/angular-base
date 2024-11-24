@@ -13,7 +13,11 @@ export class ContactService {
   
   constructor(private http: HttpClient) { }
 
-  createContact(contact: Contact): Observable<void> {
-    return this.http.post<void>(this.apiUrl, contact);
+  createContact(contact: Contact, tabParams: Map<string, string>): Observable<void> {
+    const plainObject = {
+      ...contact,
+      messages: Object.fromEntries(tabParams),
+    };
+    return this.http.post<void>(this.apiUrl, plainObject);
   }
 }
