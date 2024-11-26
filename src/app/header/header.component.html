@@ -2,7 +2,7 @@
     <span>MAR TODO EN UNA REFORMA S.L.</span>
 </mat-toolbar>
 <mat-tab-group [(selectedIndex)]="selectedIndex">
-    <mat-tab label="Calcula tu presupuesto">
+    <mat-tab label="Calcula tu presupuesto" [disabled]="isCalculaPresupuestoDisabled">
         <app-cuestionario-integral></app-cuestionario-integral>
     </mat-tab>
     <mat-tab label="Resultado" [disabled]="isResultadoIntegralDisabled">
@@ -15,3 +15,4 @@
 
 <div>
 
+    <app-server-status-component></app-server-status-component>

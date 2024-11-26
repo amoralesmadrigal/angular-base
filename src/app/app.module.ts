@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CuestionarioIntegralComponent } from './pages/cuestionario-integral/cuestionario-integral.component';
 import { ResultadoIntegralComponent } from './pages/resultado-integral/resultado-integral.component';
+import { ServerStatusComponentComponent } from './pages/server-status-component/server-status-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { ResultadoIntegralComponent } from './pages/resultado-integral/resultado
     HeaderComponent,
     HomeComponent,
     CuestionarioIntegralComponent,
-    ResultadoIntegralComponent
+    ResultadoIntegralComponent,
+    ServerStatusComponentComponent
   ],
   imports: [
     FormsModule,

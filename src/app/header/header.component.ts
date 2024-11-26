@@ -9,6 +9,7 @@ import { TabStateService } from '../services/tab-state.service';
 export class HeaderComponent  implements OnInit{
   isResultadoIntegralDisabled = true;
   isDatosContactoDisabled = true;
+  isCalculaPresupuestoDisabled = true;
   selectedIndex = 0;
 
   constructor(private tabStateService: TabStateService){
@@ -19,6 +20,7 @@ export class HeaderComponent  implements OnInit{
     this.tabStateService.tabDisabledState$.subscribe(state => {
       this.isResultadoIntegralDisabled = state['resultadoIntegral'];
       this.isDatosContactoDisabled = state['datosContacto'];
+      this.isCalculaPresupuestoDisabled = state['calculaPresupuesto'];
     });
 
     this.tabStateService.selectedIndex$.subscribe(index => {

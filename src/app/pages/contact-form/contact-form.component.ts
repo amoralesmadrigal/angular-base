@@ -34,11 +34,13 @@ export class ContactFormComponent {
         this.loading = false;
         Swal.fire({
           title: "Información enviada",
-          text: "¡Revisa tu correo!",
+          text: "En unos momentos le llegará un correo electrónico con la información",
           icon: "success"
         });
         this.contactForm.untouched
         this.contactForm.reset();
+        this.tabStateService.enableTab('calculaPresupuesto', null );
+        this.tabStateService.changeTab(0);
       }, );
     }
   }

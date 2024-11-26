@@ -18,6 +18,9 @@ export class ContactService {
       ...contact,
       messages: Object.fromEntries(tabParams),
     };
-    return this.http.post<void>(this.apiUrl, plainObject);
+    return this.http.post<void>(this.apiUrl, plainObject, {
+      headers: {
+        'Content-Type': 'application/json',
+      }});
   }
 }
