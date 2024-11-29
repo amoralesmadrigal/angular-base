@@ -30,7 +30,8 @@ export class ContactFormComponent {
   onSubmit(): void {
     if (this.contactForm.valid) {
       this.loading = true;
-      this.contactService.createContact(this.contactForm.value, this.tabStateService.getTabParams("resultadoIntegral")).subscribe(() => {
+      this.contactService.sendEmail(this.contactForm.value, this.tabStateService.getTabParams("resultadoIntegral")).subscribe();
+      setTimeout(()=>{
         this.loading = false;
         Swal.fire({
           title: "Información enviada",
@@ -41,7 +42,8 @@ export class ContactFormComponent {
         this.contactForm.reset();
         this.tabStateService.enableTab('calculaPresupuesto', null );
         this.tabStateService.changeTab(0);
-      }, );
+      }, 2000);
+      
     }
   }
 
