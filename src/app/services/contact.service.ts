@@ -9,7 +9,7 @@ import {environment} from '@envs/environment';
 })
 export class ContactService {
 
-  private apiUrl = `${environment.API_URL}/api/contacts/create`;
+  private apiUrl = `${environment.API_URL}/api/contacts/sendEmail`;
   
   constructor(private http: HttpClient) { }
 
