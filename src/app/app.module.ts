@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModuleModule } from './material-module/material-module.module';
+
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,21 +16,20 @@ import { ServerStatusComponentComponent } from './pages/server-status-component/
 @NgModule({
     declarations: [AppComponent],
     imports: [
-        FormsModule,
-        BrowserModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        FlexLayoutModule,
-        HttpClientModule,
-        AppRoutingModule,
-        MaterialModuleModule,
-        ContactFormComponent,
-        HeaderComponent,
-        HomeComponent,
-        CuestionarioIntegralComponent,
-        ResultadoIntegralComponent,
-        ServerStatusComponentComponent
-    ],
+    FormsModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ContactFormComponent,
+    HeaderComponent,
+    HomeComponent,
+    CuestionarioIntegralComponent,
+    ResultadoIntegralComponent,
+    ServerStatusComponentComponent
+],
     providers: [],
     bootstrap: [AppComponent]
 })
