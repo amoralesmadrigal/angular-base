@@ -8,7 +8,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule, _MatSlideToggleRequiredValidatorModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
-import { NgIf } from '@angular/common';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
@@ -18,7 +18,7 @@ import { MatCardModule } from '@angular/material/card';
     templateUrl: './contact-form.component.html',
     styleUrls: ['./contact-form.component.css'],
     standalone: true,
-    imports: [MatCardModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, NgIf, MatIconModule, MatSlideToggleModule, _MatSlideToggleRequiredValidatorModule, MatButtonModule, MatProgressSpinnerModule]
+    imports: [MatCardModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatSlideToggleModule, _MatSlideToggleRequiredValidatorModule, MatButtonModule, MatProgressSpinnerModule]
 })
 export class ContactFormComponent {
   contactForm: FormGroup;
