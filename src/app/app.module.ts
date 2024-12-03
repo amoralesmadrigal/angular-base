@@ -14,26 +14,24 @@ import { CuestionarioIntegralComponent } from './pages/cuestionario-integral/cue
 import { ResultadoIntegralComponent } from './pages/resultado-integral/resultado-integral.component';
 import { ServerStatusComponentComponent } from './pages/server-status-component/server-status-component.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContactFormComponent,
-    HeaderComponent,
-    HomeComponent,
-    CuestionarioIntegralComponent,
-    ResultadoIntegralComponent,
-    ServerStatusComponentComponent
-  ],
-  imports: [
-    FormsModule,
-    BrowserModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MaterialModuleModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        FormsModule,
+        BrowserModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        HttpClientModule,
+        AppRoutingModule,
+        MaterialModuleModule,
+        ContactFormComponent,
+        HeaderComponent,
+        HomeComponent,
+        CuestionarioIntegralComponent,
+        ResultadoIntegralComponent,
+        ServerStatusComponentComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

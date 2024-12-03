@@ -5,9 +5,10 @@ import { Subscription } from 'rxjs/internal/Subscription';
 import { ServerStatusServiceService } from 'src/app/services/server-status-service.service';
 
 @Component({
-  selector: 'app-server-status-component',
-  templateUrl: './server-status-component.component.html',
-  styleUrls: ['./server-status-component.component.css']
+    selector: 'app-server-status-component',
+    templateUrl: './server-status-component.component.html',
+    styleUrls: ['./server-status-component.component.css'],
+    standalone: true
 })
 export class ServerStatusComponentComponent implements OnInit, OnDestroy{
   private statusSubscription!: Subscription;

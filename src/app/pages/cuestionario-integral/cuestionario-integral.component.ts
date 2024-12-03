@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComboSiNoId } from 'src/app/enums/combosinoId.enum';
 import { ComboSiNoDes } from 'src/app/enums/combosinoDes.enum';
 import { ComboBox } from 'src/app/models/comboBox.model';
@@ -13,11 +13,22 @@ import { TipoReformaId } from 'src/app/enums/tipoReformaId.enum';
 import { TipoReformaDes } from 'src/app/enums/tipoReformaDes.enum';
 import { ViviendaId } from 'src/app/enums/viviendaId.enum';
 import { ViviendaDes } from 'src/app/enums/viviendaDes.enum';
+import { MatButtonModule } from '@angular/material/button';
+import { MatOptionModule } from '@angular/material/core';
+import { NgFor } from '@angular/common';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { FlexModule } from '@angular/flex-layout/flex';
 
 @Component({
-  selector: 'app-cuestionario-integral',
-  templateUrl: './cuestionario-integral.component.html',
-  styleUrls: ['./cuestionario-integral.component.css']
+    selector: 'app-cuestionario-integral',
+    templateUrl: './cuestionario-integral.component.html',
+    styleUrls: ['./cuestionario-integral.component.css'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, FlexModule, MatCardModule, MatIconModule, MatFormFieldModule, MatSliderModule, MatSelectModule, NgFor, MatOptionModule, MatButtonModule]
 })
 export class CuestionarioIntegralComponent implements OnInit{
   cuestionarioForm: FormGroup;

@@ -8,8 +8,8 @@ describe('ServerStatusComponentComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ServerStatusComponentComponent]
-    });
+    imports: [ServerStatusComponentComponent]
+});
     fixture = TestBed.createComponent(ServerStatusComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
