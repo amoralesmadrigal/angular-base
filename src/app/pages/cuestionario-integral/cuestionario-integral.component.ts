@@ -15,7 +15,7 @@ import { ViviendaId } from 'src/app/enums/viviendaId.enum';
 import { ViviendaDes } from 'src/app/enums/viviendaDes.enum';
 import { MatButtonModule } from '@angular/material/button';
 import { MatOptionModule } from '@angular/material/core';
-import { NgFor } from '@angular/common';
+
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -28,7 +28,7 @@ import { FlexModule } from '@angular/flex-layout/flex';
     templateUrl: './cuestionario-integral.component.html',
     styleUrls: ['./cuestionario-integral.component.css'],
     standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, FlexModule, MatCardModule, MatIconModule, MatFormFieldModule, MatSliderModule, MatSelectModule, NgFor, MatOptionModule, MatButtonModule]
+    imports: [FormsModule, ReactiveFormsModule, FlexModule, MatCardModule, MatIconModule, MatFormFieldModule, MatSliderModule, MatSelectModule, MatOptionModule, MatButtonModule]
 })
 export class CuestionarioIntegralComponent implements OnInit{
   cuestionarioForm: FormGroup;
