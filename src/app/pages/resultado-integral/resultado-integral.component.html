@@ -1,9 +1,10 @@
-<mat-card>
+<div class="container my-3">
+  <mat-card style="display: inline-block; box-shadow: none;">
     <mat-card-header>
       <mat-card-subtitle>Presupuesto Estimado</mat-card-subtitle> 
       <mat-card-title><mat-icon matSuffix>euro_symbol</mat-icon> {{getTabParams('resultadoIntegral', 'total')}} </mat-card-title> 
     </mat-card-header>
-    <mat-card-content>
+    <mat-card-content class="no-shadow">
         Por haber seleccionado
         <mat-list>
           
@@ -18,7 +19,8 @@
          </mat-list>
          
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" type="button" (click)="habilitarDatosContactoTab()">Solicitar Información</button>
+    <mat-card-actions style="justify-content: center;">
+      <button mat-raised-button color="primary" type="button" (click)="habilitarDatosContactoTab()" style="font-size: 20px; padding: 16px 24px; min-width: 200px; min-height: 60px;">Solicitar Información</button>
     </mat-card-actions>
   </mat-card>
+</div>

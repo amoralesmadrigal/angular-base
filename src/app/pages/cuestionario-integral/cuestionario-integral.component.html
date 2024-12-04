@@ -1,48 +1,52 @@
-
-
-
 <div class="container my-3">
   <form [formGroup]="cuestionarioForm" >
-    <div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center stretch">
-      <mat-card class="no-shadow">
-        <mat-card-header>
-          <mat-card-title><mat-icon matSuffix>home</mat-icon> m<sup>2</sup> de la vivienda {{sliderMC.value}}</mat-card-title>
-        </mat-card-header>
+    <div fxLayout="column" fxLayoutGap="5px" fxLayoutAlign="center stretch">
+      <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start start">
 
-        <mat-card-content>
-          <mat-slider min="1" max="300" step="1"  >
-            <input matSliderThumb  formControlName="valorMetrosCuadrados" #sliderMC>
-          </mat-slider>
+        <mat-card class="no-shadow">
+          <mat-card-header >
+            <mat-card-title><mat-icon matSuffix>home</mat-icon> m<sup>2</sup> de la vivienda {{sliderMC.value}}</mat-card-title>
+          </mat-card-header>
+  
+          <mat-card-content>
+            <mat-slider min="1" max="300" step="1"  >
+              <input matSliderThumb  formControlName="valorMetrosCuadrados" #sliderMC>
+            </mat-slider>
+  
+          </mat-card-content>
+        </mat-card>
 
-        </mat-card-content>
-      </mat-card>
+        <mat-card class="no-shadow">
+          <mat-card-header>
+            <mat-card-title><mat-icon matSuffix>shower</mat-icon> N&deg; de baños {{sliderWc.value}}</mat-card-title>
+          </mat-card-header>
+  
+          <mat-card-content>
+  
+            <mat-slider min="1" max="5" step="1">
+              <input matSliderThumb formControlName="valorWc" #sliderWc>
+            </mat-slider>
+  
+          </mat-card-content>
+        </mat-card>
 
-      <mat-card class="no-shadow">
-        <mat-card-header>
-          <mat-card-title><mat-icon matSuffix>shower</mat-icon> N&deg; de baños {{sliderWc.value}}</mat-card-title>
-        </mat-card-header>
+        <mat-card class="no-shadow">
+          <mat-card-header>
+            <mat-card-title><mat-icon matSuffix>bedroom_parent</mat-icon> N&deg; de habitaciones {{sliderHab.value}}</mat-card-title>
+          </mat-card-header>
+  
+          <mat-card-content>
+            <mat-slider min="1" max="10" step="1">
+              <input matSliderThumb  formControlName="valorHabitaciones" #sliderHab>
+            </mat-slider>
+          </mat-card-content>
+        </mat-card>
+      </div>
 
-        <mat-card-content>
+      
 
-          <mat-slider min="1" max="5" step="1">
-            <input matSliderThumb formControlName="valorWc" #sliderWc>
-          </mat-slider>
-
-        </mat-card-content>
-      </mat-card>
-
-      <mat-card class="no-shadow">
-        <mat-card-header>
-          <mat-card-title><mat-icon matSuffix>bedroom_parent</mat-icon> N&deg; de habitaciones {{sliderHab.value}}</mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content>
-          <mat-slider min="1" max="10" step="1">
-            <input matSliderThumb  formControlName="valorHabitaciones" #sliderHab>
-          </mat-slider>
-        </mat-card-content>
-      </mat-card>
-
+      
+      <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start start">
       <mat-card class="no-shadow">
         <mat-card-header>
           <mat-card-title><mat-icon matSuffix>blender</mat-icon> Cocina</mat-card-title>
@@ -78,7 +82,8 @@
           </mat-form-field>
         </mat-card-content>
       </mat-card>
-
+      </div>
+      <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start start">
       <mat-card class="no-shadow">
         <mat-card-header>
           <mat-card-title>Tipo de vivienda</mat-card-title>
@@ -132,11 +137,11 @@
           </mat-form-field>
         </mat-card-content>
       </mat-card>
-
+    </div>
       <mat-card class="no-shadow">
         <mat-card-content>
-          <mat-card-actions>
-            <button mat-raised-button color="primary" type="button" (click)="habilitarResultadoIntegralTab(true)">Calcular</button>
+          <mat-card-actions >
+            <button mat-raised-button color="primary" type="button" (click)="habilitarResultadoIntegralTab(true)" style="font-size: 20px; padding: 16px 24px; min-width: 200px; min-height: 60px;">Calcular</button>
           </mat-card-actions>
         </mat-card-content>
       </mat-card>
