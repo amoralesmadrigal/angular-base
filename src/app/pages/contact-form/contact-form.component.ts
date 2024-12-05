@@ -33,7 +33,7 @@ export class ContactFormComponent {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phoneNumber: ['', Validators.required],
-      consentimiento: ['', Validators.requiredTrue]
+      consentimiento: [{value: '', disabled: this.disabled}, Validators.requiredTrue]
     });
   }
 
