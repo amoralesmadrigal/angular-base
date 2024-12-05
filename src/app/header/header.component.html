@@ -4,21 +4,21 @@
 <mat-tab-group [(selectedIndex)]="selectedIndex">
     <mat-tab [disabled]="isCalculaPresupuestoDisabled">
         <ng-template mat-tab-label>
-            Calcula tu presupuesto
+            {{ 'TITLE_TAB_1' | translate }}
             <mat-icon>calculate</mat-icon>
           </ng-template>
         <app-cuestionario-integral></app-cuestionario-integral>
     </mat-tab>
     <mat-tab [disabled]="isResultadoIntegralDisabled">
         <ng-template mat-tab-label>
-            Resultado
+            {{ 'TITLE_TAB_2' | translate }}
             <mat-icon>euro_symbol</mat-icon>
           </ng-template>
         <app-resultado-integral></app-resultado-integral>
     </mat-tab>
     <mat-tab [disabled]="isDatosContactoDisabled">
         <ng-template mat-tab-label>
-            Datos de Contacto
+            {{ 'TITLE_TAB_3' | translate }}
             <mat-icon>contact_mail</mat-icon>
         </ng-template>
         <app-contact-form></app-contact-form>
