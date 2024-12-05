@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+/* Define paletas de colores */
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$pink-palette);
+$warn: mat.define-palette(mat.$red-palette);
+
+/* Define un tema claro */
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  typography: mat.define-typography-config(),
+  background: (
+    background: #B3C8CF, /* Fondo global */
+  )
+));
+
+/* Aplica el tema a todos los componentes */
+@include mat.all-component-themes($theme);
